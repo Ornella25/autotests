@@ -2,6 +2,7 @@ from playwright.sync_api import sync_playwright
 import time
 
 from pages.checkout_page import CheckoutPage
+from pages.complete_order_and_loguot import CompleteOrderAndLogout
 from pages.inventory_page import InventoryPage
 from pages.login_page import LoginPage
 
@@ -68,3 +69,10 @@ def test_add_items_and_checkout(browser):
     inventory_page.add_first_item_to_cart()
     checkout_page.start_checkout()
     checkout_page.type_and_fill_checkout_form('Ornella', 'Chislyuk', '242534543')
+
+    complete_order_and_logout = CompleteOrderAndLogout(page)
+
+    complete_order_and_logout.complete_order()
+    complete_order_and_logout.logout()
+
+

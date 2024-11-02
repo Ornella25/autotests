@@ -10,7 +10,7 @@ class CheckoutPage(BasePage):
 
     def __init__(self, page):
         super().__init__(page)
-        self._endpoint = '//checkout-step-one.html'
+        self._endpoint = '/checkout-step-one.html'
 
     def start_checkout(self):
         self.wait_for_selector_and_click(self.CHECKOUT_BUTTON_SELECTOR)
