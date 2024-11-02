@@ -76,3 +76,4 @@ def test_add_items_and_checkout(browser):
     complete_order_and_logout.logout()
 
 
+
