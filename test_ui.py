@@ -23,7 +23,8 @@ from pages.login_page import LoginPage
 # card_button_1 = '.inventory_item_description:has-text("Sauce Labs Backpack") button:has-text("Add to cart")'
 # card_button_2 = '.inventory_item_description:has-text("Sauce Labs Bike Light") button:has-text("Add to cart")'
 # cart = '[data-test="shopping-cart-link"]'
-#
+# BURGER_MENU_SELECTOR = '#react-burger-menu-btn'
+# LOGOUT_SELECTOR = 'a:has-text("Logout")'
 #
 # page.is_visible(selector=button_and_cart)
 # page.is_enabled(selector=button_and_cart)
@@ -53,6 +54,11 @@ from pages.login_page import LoginPage
 # page.wait_for_selector('button:has-text("Finish")')
 # page.click(selector='button:has-text("Finish")')
 # page.wait_for_url('https://www.saucedemo.com/checkout-complete.html', timeout=10000)
+#
+# page.click(BURGER_MENU_SELECTOR)
+# page.click(LOGOUT_SELECTOR)
+# page.expect.to_have_url("https://www.saucedemo.com")
+#
 # time.sleep(5)
 #
 # browser.close()

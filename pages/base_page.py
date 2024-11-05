@@ -30,6 +30,10 @@ class BasePage:
         self.page.wait_for_selector(selector)
         self.page.type(selector, text, delay=delay)
 
+    def wait_for_url(self):
+        expect(self.page).to_have_url(f"{self.__BASE_URL}/")
+
+
     def assert_element_is_visible(self, selector):
         expect(self.page.locator(selector)).to_be_visible()
 

@@ -17,8 +17,9 @@ class CompleteOrderAndLogout(BasePage):
         self.wait_for_selector_and_click(self.BURGER_MENU_SELECTOR)
         self.assert_element_is_visible('.bm-item-list')
         self.wait_for_selector_and_click(self.LOGOUT_SELECTOR)
+        self.wait_for_url()
         self.assert_text_present_on_page('Swag Labs')
-        self._get_full_url()
+
 
 
 
